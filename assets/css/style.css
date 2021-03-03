@@ -1,0 +1,70 @@
+:root {
+    /* define global colour variables */
+    --primary-colour: #545C52;
+    --secondary-colour: #C4745A;
+    --tertiary-colour: #4A5759;
+    --quaternary-colour: #DEDBD2;
+}
+
+* {
+    /* box model */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* general body styles */
+body {
+    /* typography */
+    font-family: "Roboto", sans-serif;
+}
+
+/* header styles */
+header {
+    /* box model */
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+
+    /* visual decorations */
+    background-color: var(--primary-colour);
+}
+
+    header h1 {
+        /* box model */
+        padding: 5px;
+        width: 90%;
+
+        /* typography */
+        text-align: center;
+
+        /* visual decorations */
+        background-color: var(--quaternary-colour);
+    }
+
+        header h1 a {
+            /* typography */
+            color: black;
+
+            /* visual decorations */
+            text-decoration: none;
+        }
+
+    header ul {
+        /* box model */
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+        /* visual decorations */
+        list-style: none;
+    }
+
+        header ul a {
+            /* typography */
+            color: var(--quaternary-colour);
+
+            /* visual decorations */
+            text-decoration: none;
+        }
