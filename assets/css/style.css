@@ -8,18 +8,20 @@
 
 * {
     /* box model */
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* general body styles */
+/* ----- general body styles ----- */
+
 body {
     /* typography */
     font-family: "Roboto", sans-serif;
 }
 
-/* header styles */
+/* ----- header styles ----- */
+
 header {
     /* box model */
     display: flex;
@@ -52,10 +54,10 @@ header {
 
     header ul {
         /* box model */
-        padding: 10px 0px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        padding: 10px 0px;
         
         /* visual decorations */
         list-style: none;
@@ -68,3 +70,39 @@ header {
             /* visual decorations */
             text-decoration: none;
         }
+
+/* ----- hero section styles ----- */
+
+#hero {
+    /* box model */
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: flex-end;
+    padding: 20px 25px;
+
+    /* typography */
+    text-align: center;
+
+    /* visual decorations */
+    background-color: var(--secondary-colour); /* HERO IMAGE TO BE ADDED */
+}
+
+    #hero h2 {
+        /* typography */
+        font-size: 20px;
+
+        /* visual decorations */
+        background-color: var(--quaternary-colour);
+    }
+
+/* ----- main content styles ----- */
+
+main {
+    /* box model */
+    height: 500px;
+
+    /* visual decorations */
+    background-image: url("../images/main-background.svg");
+    background-size: cover;
+}
