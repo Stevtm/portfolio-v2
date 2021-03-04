@@ -88,19 +88,19 @@ header {
     background-color: var(--secondary-colour); /* HERO IMAGE TO BE ADDED */
 }
 
-    #hero h2 {
-        /* typography */
-        font-size: 20px;
+h2 {
+    /* typography */
+    font-size: 20px;
 
-        /* visual decorations */
-        background-color: var(--quaternary-colour);
-    }
+    /* visual decorations */
+    background-color: var(--quaternary-colour);
+}
 
 /* ----- general main content styles ----- */
 
 main {
     /* box model */
-    height: 500px;
+    padding: 0 15px 20px 15px;
 
     /* visual decorations */
     background-image: url("../images/main-background.svg");
@@ -112,7 +112,6 @@ main {
         align-items: center;
         display: flex;
         flex-direction: column;
-        padding: 0 15px;
     }
 
     main h3 {
@@ -163,8 +162,32 @@ section a {
     padding: 0 0 10px 0;
 
     /* typography */
-    color: var(--primary-colour);
+    color: black;
 
     /* visual decorations */
     text-decoration: none;
+}
+
+/* ----- media queries for reponsive design to larger screen sizes ----- */
+
+/* styles for large mobile phones and larger */
+@media screen and (min-width: 575px) {
+
+    /* header styles */
+    header h1 {
+        /* box model */
+        width: 60%;
+    }
+
+    /* hero section styles */
+    #hero {
+        /* box model */
+        align-items: flex-end;
+    }
+
+    h2 {
+        /* box model */
+        width: 60%;
+    }
+
 }
