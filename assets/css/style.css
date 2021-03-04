@@ -80,6 +80,7 @@ header {
     height: 200px;
     justify-content: flex-end;
     padding: 20px 25px;
+    margin-bottom: 20px;
 
     /* typography */
     text-align: center;
@@ -107,24 +108,47 @@ main {
     background-size: cover;
 }
 
-main section {
-    /* box model */
-    display: flex;
-    flex-direction: column;
-}
+    main section {
+        /* box model */
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+    }
 
-main h3 {
-    /* box model */
-    margin: 10px auto;
-    border-bottom: solid var(--primary-colour) 2px;
-
-    /* typography */
-    text-align: center;
-}
+    main h3 {
+        /* box model */
+        border-bottom: solid var(--primary-colour) 2px;
+        margin: 10px auto;
+    }
 
 /* ----- about me section styles ----- */
 
-main p {
+
+/* ----- work section styles ----- */
+
+article {
     /* box model */
-    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: flex-end;
+    margin: 20px 0;
+    width: 100%; 
+    
+    /* visual decorations */
+    background-color: var(--quaternary-colour);
+    box-shadow: 0px 0px 1px 2px rgb(0, 0, 0, 0.7);
 }
+
+    article div {
+        /* box model */
+        padding: 10px 20px;
+        margin: 20px auto 10px 0;
+
+        /* typography */
+        color: var(--quaternary-colour);
+
+        /* visual decorations */
+        background-color: var(--primary-colour);
+    }
