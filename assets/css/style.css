@@ -80,7 +80,6 @@ header {
     height: 200px;
     justify-content: flex-end;
     padding: 20px 25px;
-    margin-bottom: 20px;
 
     /* typography */
     text-align: center;
@@ -119,7 +118,7 @@ main {
     main h3 {
         /* box model */
         border-bottom: solid var(--primary-colour) 2px;
-        margin: 10px auto;
+        margin: 30px auto 20px auto;
     }
 
 /* ----- about me section styles ----- */
@@ -131,15 +130,19 @@ article {
     /* box model */
     display: flex;
     flex-direction: column;
-    height: 200px;
+    height: 150px;
     justify-content: flex-end;
-    margin: 20px 0;
     width: 100%; 
     
     /* visual decorations */
     background-color: var(--quaternary-colour);
     box-shadow: 0px 0px 1px 2px rgb(0, 0, 0, 0.7);
 }
+
+    article:not(:last-child) {
+        /* box model */
+        margin: 0 0 40px 0;
+    }
 
     article div {
         /* box model */
@@ -152,3 +155,16 @@ article {
         /* visual decorations */
         background-color: var(--primary-colour);
     }
+
+/* ----- contact me section styles ------ */
+
+section a {
+    /* box model */
+    padding: 0 0 10px 0;
+
+    /* typography */
+    color: var(--primary-colour);
+
+    /* visual decorations */
+    text-decoration: none;
+}
