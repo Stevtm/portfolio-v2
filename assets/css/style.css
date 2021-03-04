@@ -96,7 +96,7 @@ header {
         background-color: var(--quaternary-colour);
     }
 
-/* ----- main content styles ----- */
+/* ----- general main content styles ----- */
 
 main {
     /* box model */
@@ -105,4 +105,26 @@ main {
     /* visual decorations */
     background-image: url("../images/main-background.svg");
     background-size: cover;
+}
+
+main section {
+    /* box model */
+    display: flex;
+    flex-direction: column;
+}
+
+main h3 {
+    /* box model */
+    margin: 10px auto;
+    border-bottom: solid var(--primary-colour) 2px;
+
+    /* typography */
+    text-align: center;
+}
+
+/* ----- about me section styles ----- */
+
+main p {
+    /* box model */
+    padding: 0 15px;
 }
