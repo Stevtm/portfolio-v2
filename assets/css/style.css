@@ -125,6 +125,11 @@ main {
 
 /* ----- work section styles ----- */
 
+section > div {
+    /* box model */
+    width: 100%;
+}
+
 article {
     /* box model */
     display: flex;
@@ -157,6 +162,13 @@ article {
 
 /* ----- contact me section styles ------ */
 
+#contact div {
+    /* box model */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 section a {
     /* box model */
     padding: 0 0 10px 0;
@@ -188,6 +200,121 @@ section a {
     h2 {
         /* box model */
         width: 60%;
+    }
+
+    /* contact me section styles */
+    #contact div {
+        /* box model */
+        flex-direction: row;
+        justify-content: space-around;
+        width: 80%;
+    }
+
+}
+
+/* styles for tablets and larger */
+@media screen and (min-width: 768px) {
+    
+    /* header styles */
+    header {
+        /* box model */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0px;
+    }
+
+        header h1 {
+            width: 40%;
+        }
+
+        header ul {
+            /* box model */
+            justify-content: space-between;
+            padding: 10px 20px;
+            
+            /* visual decorations */
+            list-style: none;
+        }
+
+            header ul li {
+                /* box model */
+                padding: 0px 20px;
+            }
+
+    /* general main content styles */
+    main {
+        /* box model */
+        padding: 0 25px 20px 25px;
+    }
+    
+        main section {
+            /* box model */
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        main h3 {
+            /* box model */
+            border-bottom: none;
+            border-right: solid var(--primary-colour) 3px;
+            height: 100%;
+            min-height: 100px;
+            margin: 10px 30px 10px 0;
+            padding: 15px 20px 0 0;
+            width: 15%;
+
+            /* typography */
+            text-align: right;
+        }
+    
+    /* about me section styles  */
+
+    section p {
+        /* box model */
+        padding-right: 20px;
+        width: 80%;
+
+        /* typography */
+        text-align: left;
+    }
+
+    /* work section styles */
+    section > div {
+        /* box model */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+
+    #work h3 {
+        height: 720px;
+    }
+    
+    article {
+        /* box model */
+        height: 200px;
+        margin: 0 10px 40px 10px;
+        width: calc(50% - 20px); 
+    }
+
+        article:first-of-type {
+            /* box model */
+            width: calc(100% - 20px);
+        }
+
+        article:not(:last-child) {
+            /* box model */
+            margin: 0 10px 40px 10px;
+        }
+
+    /* contact me section */
+    #contact {
+        /* box model */
+        align-items: center;
+        justify-content: space-around;
     }
 
 }
