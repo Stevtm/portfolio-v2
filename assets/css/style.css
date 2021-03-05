@@ -103,8 +103,8 @@ main {
     padding: 0 15px 20px 15px;
 
     /* visual decorations */
-    background-image: url("../images/main-background.svg");
-    background-size: cover;
+    /* background-image: url("../images/main-background.svg");
+    background-size: cover; */
 }
 
     main section {
@@ -314,7 +314,46 @@ section a {
     #contact {
         /* box model */
         align-items: center;
-        justify-content: space-around;
+    }
+
+}
+
+/* styles for smaller desktop screen and larger */
+@media screen and (min-width: 980px) {
+
+    /* header styles */
+        header h1 {
+            /* box model */
+            flex-grow: 1;
+        }
+
+        header nav {
+            /* box model */
+            flex-grow: 5;
+            max-width: 1000px;
+        }
+
+        header ul {
+            /* box model */
+            justify-content: space-around;
+            padding: 0;
+        }
+
+    /* hero section styles */
+    h2 {
+        /* box model */
+        margin-right: 10%;
+        width: 30%;
+    }
+
+    /* work section styles */
+    article {
+        /* box model */
+        height: 300px;
+    }
+
+    #work h3 {
+        height: 1020px;
     }
 
 }
