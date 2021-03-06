@@ -24,6 +24,14 @@ body {
 	font-family: var(--body-font);
 }
 
+.card {
+	/* visual decorations */
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
 /* ----- header styles ----- */
 
 header {
@@ -99,12 +107,6 @@ h2 {
 	/* box model */
 	padding: 10px 0;
 
-	/* visual decorations */
-	background: rgba(255, 255, 255, 0.5);
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
-	border-radius: 10px;
-	border: 1px solid rgba(255, 255, 255, 0.18);
-
 	/* typography */
 	font-size: 20px;
 	line-height: 1.4;
@@ -114,7 +116,7 @@ h2 {
 
 main {
 	/* box model */
-	padding: 0 15px 20px 15px;
+	padding: 0 10% 20px 10%;
 
 	/* visual decorations */
 	background-image: url("../images/main-background.svg");
@@ -129,23 +131,35 @@ main section {
 	flex-direction: column;
 }
 
-main h3 {
+main h3.card {
 	/* box model */
-	border-bottom: solid var(--primary-colour) 2px;
-	margin: 30px auto 20px auto;
+	border-bottom: solid var(--primary-colour) 5px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	padding: 10px 0;
+	margin: 30px auto 0px auto;
+	width: 100%;
 
 	/* typography */
 	font-family: var(--header-font);
 	font-size: 30px;
+	text-align: center;
+
+	/* visual decorations */
 }
 
-main p {
+/* ----- about me section styles ----- */
+
+main p.card {
+	/* box model */
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	padding: 20px 15px;
+
 	/* typography */
 	font-size: 18px;
 	line-height: 1.4;
 }
-
-/* ----- about me section styles ----- */
 
 /* ----- work section styles ----- */
 
@@ -154,24 +168,42 @@ section > div {
 	width: 100%;
 }
 
+section div > .card {
+	/* box model */
+	padding: 20px 15px;
+}
+
+section div > .card:not(:last-child) {
+	/* box model */
+	border-bottom: solid var(--primary-colour) 5px;
+	border-radius: 0;
+}
+
+section div > .card:last-child {
+	/* box model */
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
 .project {
 	/* box model */
+	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
 	height: 150px;
 	justify-content: flex-end;
-	width: 100%;
+	margin: 10px auto;
+	width: calc(100%);
 
 	/* visual decorations */
 	background-size: cover;
 	background-position: right;
-	box-shadow: 0px 0px 1px 2px rgb(0, 0, 0, 0.7);
 	text-decoration: inherit;
 }
 
 .project:first-child {
 	/* box model */
-	height: 250px;
+	height: 200px;
 }
 
 .project:not(:last-child) {
@@ -220,6 +252,13 @@ section > div {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+#contact div.card {
+	/* box model */
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	padding: 20px 15px;
 }
 
 #contact a {
