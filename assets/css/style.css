@@ -130,7 +130,7 @@ section > div {
     width: 100%;
 }
 
-article {
+.project {
     /* box model */
     display: flex;
     flex-direction: column;
@@ -141,14 +141,20 @@ article {
     /* visual decorations */
     background-color: var(--quaternary-colour);
     box-shadow: 0px 0px 1px 2px rgb(0, 0, 0, 0.7);
+    text-decoration: inherit;
 }
 
-    article:not(:last-child) {
+    .project:first-child {
+        /* box model */
+        height: 250px;
+    }
+
+    .project:not(:last-child) {
         /* box model */
         margin: 0 0 40px 0;
     }
 
-    article div {
+    .project div {
         /* box model */
         padding: 10px 20px;
         margin: 20px auto 10px 0;
@@ -169,14 +175,12 @@ article {
     align-items: center;
 }
 
-section a {
+#contact a {
     /* box model */
     padding: 0 0 10px 0;
 
     /* typography */
     color: black;
-
-    /* visual decorations */
     text-decoration: none;
 }
 
@@ -293,19 +297,19 @@ section a {
         height: 720px;
     }
     
-    article {
+    .project {
         /* box model */
         height: 200px;
         margin: 0 10px 40px 10px;
         width: calc(50% - 20px); 
     }
 
-        article:first-of-type {
+        .project:first-of-type {
             /* box model */
             width: calc(100% - 20px);
         }
 
-        article:not(:last-child) {
+        .project:not(:last-child) {
             /* box model */
             margin: 0 10px 40px 10px;
         }
@@ -347,7 +351,7 @@ section a {
     }
 
     /* work section styles */
-    article {
+    .project {
         /* box model */
         height: 300px;
     }
