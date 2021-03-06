@@ -139,7 +139,8 @@ section > div {
     width: 100%; 
     
     /* visual decorations */
-    background-color: var(--quaternary-colour);
+    background-size: cover;
+    background-position: right;
     box-shadow: 0px 0px 1px 2px rgb(0, 0, 0, 0.7);
     text-decoration: inherit;
 }
@@ -165,6 +166,29 @@ section > div {
         /* visual decorations */
         background-color: var(--primary-colour);
     }
+
+/* add unique background images for each of the projects */
+#password-generator {
+    /* visual decorations */
+    background-image: url("../images/password-generator.jpeg");
+}
+
+#robot-gladiator {
+    background-image: url("../images/robot-gladiator.jpeg");
+
+}
+
+#horiseon-refactor {
+    background-image: url("../images/horiseon-refactor.jpeg");
+}
+
+#run-buddy {
+    background-image: url("../images/run-buddy.jpg");
+}
+
+#placeholder {
+    background-image: url("../images/placeholder.jpg");
+}
 
 /* ----- contact me section styles ------ */
 
