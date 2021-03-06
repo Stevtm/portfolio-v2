@@ -4,6 +4,10 @@
 	--secondary-colour: #c4745a;
 	--tertiary-colour: #4a5759;
 	--quaternary-colour: #dedbd2;
+
+	/* define global font family variables */
+	--header-font: "Oswald", sans-serif;
+	--body-font: "Roboto", sans-serif;
 }
 
 * {
@@ -17,7 +21,7 @@
 
 body {
 	/* typography */
-	font-family: "Roboto", sans-serif;
+	font-family: var(--body-font);
 }
 
 /* ----- header styles ----- */
@@ -27,6 +31,9 @@ header {
 	display: flex;
 	flex-direction: column;
 	padding-top: 10px;
+
+	/* typography */
+	font-family: var(--body-font);
 
 	/* visual decorations */
 	background-color: var(--primary-colour);
@@ -97,8 +104,10 @@ h2 {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
 	border-radius: 10px;
 	border: 1px solid rgba(255, 255, 255, 0.18);
+
 	/* typography */
 	font-size: 20px;
+	line-height: 1.4;
 }
 
 /* ----- general main content styles ----- */
@@ -124,6 +133,16 @@ main h3 {
 	/* box model */
 	border-bottom: solid var(--primary-colour) 2px;
 	margin: 30px auto 20px auto;
+
+	/* typography */
+	font-family: var(--header-font);
+	font-size: 30px;
+}
+
+main p {
+	/* typography */
+	font-size: 18px;
+	line-height: 1.4;
 }
 
 /* ----- about me section styles ----- */
@@ -209,6 +228,7 @@ section > div {
 
 	/* typography */
 	color: black;
+	font-size: 18px;
 	text-decoration: none;
 }
 
@@ -298,6 +318,12 @@ section > div {
 		text-align: right;
 	}
 
+	/* general main section styles */
+	main h3 {
+		/* box model */
+		padding-top: 0px;
+	}
+
 	/* about me section styles  */
 
 	section p {
@@ -366,6 +392,12 @@ section > div {
 		padding: 0;
 	}
 
+	/* general main section styles */
+	main h3 {
+		/* typography */
+		font-size: 35px;
+	}
+
 	/* hero section styles */
 	h2 {
 		/* box model */
@@ -380,6 +412,7 @@ section > div {
 	}
 
 	#work h3 {
+		/* box model */
 		height: 1020px;
 	}
 }
