@@ -80,30 +80,22 @@ header ul {
 	list-style: none;
 }
 
-header li.card {
+header li {
 	/* box model */
-	background-color: var(--quaternary-colour);
-	border-radius: 5px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	min-width: 80px;
 	padding: 5px 5px;
+
+	/* typography */
+	text-transform: uppercase;
+	font-weight: bold;
 
 	/* visual decorations */
 	cursor: pointer;
 	transition: all 0.2s ease-out;
 }
 
-header li.card:hover {
-	/* visual decorations */
-	background-color: white;
-}
-
 header ul a {
 	/* typography */
-	color: black;
+	color: var(--quaternary-colour);
 
 	/* visual decorations */
 	text-decoration: none;
@@ -122,7 +114,7 @@ header ul a {
 	text-align: center;
 
 	/* visual decorations */
-	background-image: linear-gradient(var(--secondary-colour), white);
+	background-image: linear-gradient(var(--quaternary-colour), white);
 }
 
 #hero div {
@@ -400,7 +392,7 @@ section div > .card:last-child {
 	/* general main content styles */
 	main {
 		/* box model */
-		padding: 0 25px 20px 25px;
+		padding: 20px 25px 20px 25px;
 	}
 
 	main section {
@@ -541,6 +533,11 @@ section div > .card:last-child {
 		/* box model */
 		justify-content: space-around;
 		padding: 0;
+	}
+
+	/* hero section styles */
+	#hero div {
+		width: 40%;
 	}
 
 	/* general main section styles */
