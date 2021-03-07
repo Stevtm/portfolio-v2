@@ -142,10 +142,8 @@ main h3.card {
 
 	/* typography */
 	font-family: var(--header-font);
-	font-size: 30px;
+	font-size: 25px;
 	text-align: center;
-
-	/* visual decorations */
 }
 
 /* ----- about me section styles ----- */
@@ -213,11 +211,13 @@ section div > .card:last-child {
 
 .project div {
 	/* box model */
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
 	padding: 10px 20px;
 	margin: 20px auto 10px 0;
 
 	/* typography */
-	color: var(--quaternary-colour);
+	color: white;
 
 	/* visual decorations */
 	background-color: var(--primary-colour);
@@ -259,6 +259,7 @@ section div > .card:last-child {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 	padding: 20px 15px;
+	width: 100%;
 }
 
 #contact a {
@@ -343,14 +344,17 @@ section div > .card:last-child {
 		flex-wrap: wrap;
 	}
 
-	main h3 {
+	main h3.card {
 		/* box model */
 		border-bottom: none;
-		border-right: solid var(--primary-colour) 3px;
-		height: 100%;
-		min-height: 100px;
-		margin: 10px 30px 10px 0;
-		padding: 15px 20px 0 0;
+		border-right: solid var(--primary-colour) 5px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0px;
+		border-bottom-left-radius: 10px;
+		height: 100%; /* Investigate this */
+		margin: 10px 0;
+		padding: 15px 10px 0 0;
 		width: 15%;
 
 		/* typography */
@@ -364,50 +368,92 @@ section div > .card:last-child {
 	}
 
 	/* about me section styles  */
+	#about {
+		height: 150px;
+	}
 
-	section p {
+	section p.card {
 		/* box model */
-		padding-right: 20px;
-		width: 80%;
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 0;
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 20px;
+		width: 85%;
 
 		/* typography */
 		text-align: left;
 	}
 
 	/* work section styles */
+	#work {
+		/* box model */
+		margin-top: 25px;
+	}
 	section > div {
 		/* box model */
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		width: 80%;
+		width: 85%;
+	}
+
+	section div > .card {
+		/* box model */
+		width: 50%;
+	}
+
+	section div > .card:first-child {
+		/* box model */
+		border: none;
+		border-top-right-radius: 10px;
+		width: 100%;
+	}
+
+	section div > .card:nth-child(2) {
+		/* box model */
+		border: none;
+		box-shadow: none;
+	}
+
+	section div > .card:nth-child(3) {
+		/* box model */
+		border: none;
+		clip-path: inset(0 -25px 0 0);
+	}
+
+	section div > .card:nth-child(4) {
+		/* box model */
+		border: none;
+		clip-path: inset(0 0 -25px 0);
+	}
+
+	section div > .card:last-child {
+		/* box model */
+		border-bottom-left-radius: 0;
+		clip-path: inset(0 -25px -25px 0);
 	}
 
 	#work h3 {
-		height: 720px;
-	}
-
-	.project {
-		/* box model */
-		height: 200px;
-		margin: 0 10px 40px 10px;
-		width: calc(50% - 20px);
-	}
-
-	.project:first-of-type {
-		/* box model */
-		width: calc(100% - 20px);
-	}
-
-	.project:not(:last-child) {
-		/* box model */
-		margin: 0 10px 40px 10px;
+		height: 783px;
 	}
 
 	/* contact me section */
 	#contact {
 		/* box model */
 		align-items: center;
+		height: 125px;
+	}
+
+	#contact div.card {
+		/* box model */
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 0;
+		height: 100%;
+		padding: 0 20px;
+		width: 85%;
 	}
 }
 
@@ -452,6 +498,6 @@ section div > .card:last-child {
 
 	#work h3 {
 		/* box model */
-		height: 1020px;
+		height: 783px;
 	}
 }
