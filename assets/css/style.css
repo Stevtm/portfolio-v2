@@ -47,8 +47,10 @@ header {
 	background-color: var(--primary-colour);
 }
 
-header h1 {
+header h1.card {
 	/* box model */
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
 	padding: 5px;
 	width: 90%;
 
@@ -72,15 +74,36 @@ header ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	padding: 10px 0px;
+	margin: 15px 0px;
 
 	/* visual decorations */
 	list-style: none;
 }
 
+header li.card {
+	/* box model */
+	background-color: var(--quaternary-colour);
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-width: 80px;
+	padding: 5px 5px;
+
+	/* visual decorations */
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+}
+
+header li.card:hover {
+	/* visual decorations */
+	background-color: white;
+}
+
 header ul a {
 	/* typography */
-	color: var(--quaternary-colour);
+	color: black;
 
 	/* visual decorations */
 	text-decoration: none;
@@ -277,9 +300,9 @@ section div > .card:last-child {
 /* styles for large mobile phones and larger */
 @media screen and (min-width: 575px) {
 	/* header styles */
-	header h1 {
+	header h1.card {
 		/* box model */
-		width: 60%;
+		width: 50%;
 	}
 
 	/* hero section styles */
@@ -313,8 +336,12 @@ section div > .card:last-child {
 		padding: 15px 0px;
 	}
 
-	header h1 {
+	header h1.card {
 		width: 40%;
+	}
+
+	header nav {
+		width: 60%;
 	}
 
 	header ul {
@@ -329,6 +356,12 @@ section div > .card:last-child {
 	header ul li {
 		/* box model */
 		padding: 0px 20px;
+	}
+
+	/* hero styles */
+	h2 {
+		/* box model */
+		width: 40%;
 	}
 
 	/* general main content styles */
