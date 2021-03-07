@@ -114,16 +114,31 @@ header ul a {
 #hero {
 	/* box model */
 	display: flex;
-	flex-direction: column;
-	height: 200px;
-	justify-content: flex-end;
-	padding: 20px 25px;
+	flex-direction: row;
+	justify-content: center;
+	padding: 20px 25px 0 25px;
 
 	/* typography */
 	text-align: center;
 
 	/* visual decorations */
 	background-image: linear-gradient(var(--secondary-colour), white);
+}
+
+#hero div {
+	/* box model */
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 80%;
+}
+
+#hero img {
+	/* box model */
+	border-radius: 100%;
+	margin: 20px 0 0px 0;
+	width: 60%;
 }
 
 h2 {
@@ -359,9 +374,27 @@ section div > .card:last-child {
 	}
 
 	/* hero styles */
+	#hero {
+		/* box model */
+		justify-content: flex-end;
+	}
+
+	#hero div {
+		/* box model */
+		flex-direction: row;
+		height: 60%;
+		width: 50%;
+	}
+
+	#hero img {
+		/* box model */
+		width: 30%;
+		margin: 10px 10px;
+	}
+
 	h2 {
 		/* box model */
-		width: 40%;
+		width: 60%;
 	}
 
 	/* general main content styles */
@@ -519,8 +552,7 @@ section div > .card:last-child {
 	/* hero section styles */
 	h2 {
 		/* box model */
-		margin-right: 10%;
-		width: 30%;
+		width: 60%;
 	}
 
 	/* work section styles */
