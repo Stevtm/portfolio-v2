@@ -432,7 +432,7 @@ section div > .card:last-child {
 
 	/* about me section styles  */
 	#about {
-		height: 150px;
+		height: 240px;
 	}
 
 	section p.card {
@@ -555,6 +555,11 @@ section div > .card:last-child {
 	h2 {
 		/* box model */
 		width: 60%;
+	}
+
+	/* about me section styles */
+	#about {
+		height: 200px;
 	}
 
 	/* work section styles */
