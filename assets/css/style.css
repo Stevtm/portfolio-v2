@@ -95,7 +95,7 @@ header li {
 
 header ul a {
 	/* typography */
-	color: var(--quaternary-colour);
+	color: white;
 
 	/* visual decorations */
 	text-decoration: none;
@@ -251,6 +251,11 @@ section div > .card:last-child {
 
 	/* visual decorations */
 	background-color: var(--primary-colour);
+}
+
+.project p {
+	/* typography */
+	font-size: 14px;
 }
 
 /* add unique background images for each of the projects */
