@@ -229,11 +229,6 @@ section div > .card:last-child {
 	text-decoration: inherit;
 }
 
-.project:first-child {
-	/* box model */
-	height: 200px;
-}
-
 .project:not(:last-child) {
 	/* box model */
 	margin: 0 0 40px 0;
@@ -259,9 +254,12 @@ section div > .card:last-child {
 }
 
 /* add unique background images for each of the projects */
-#password-generator {
+#placeholder-portfolio {
+	/* box model */
+	height: 200px;
+
 	/* visual decorations */
-	background-image: url("../images/password-generator.jpeg");
+	background-image: url("../images/placeholder-portfolio.jpeg");
 }
 
 #robot-gladiator {
@@ -500,7 +498,7 @@ section div > .card:last-child {
 	}
 
 	#work h3 {
-		height: 783px;
+		height: 683px;
 	}
 
 	/* contact me section */
@@ -565,11 +563,16 @@ section div > .card:last-child {
 	/* work section styles */
 	.project {
 		/* box model */
-		height: 300px;
+		height: 250px;
 	}
 
 	#work h3 {
 		/* box model */
-		height: 783px;
+		height: 933px;
+	}
+
+	#placeholder-portfolio {
+		/* box model */
+		height: 250px;
 	}
 }
