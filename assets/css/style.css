@@ -24,6 +24,7 @@ body {
 	font-family: var(--body-font);
 }
 
+/* card styles to be re-used across all elements that will display as cards */
 .card {
 	/* visual decorations */
 	background: rgba(255, 255, 255, 0.9);
@@ -71,6 +72,7 @@ header h1 a {
 
 header ul {
 	/* box model */
+	align-items: center;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -85,6 +87,7 @@ header li {
 	padding: 5px 5px;
 
 	/* typography */
+	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
 
@@ -117,6 +120,7 @@ header ul a {
 	background-image: linear-gradient(var(--quaternary-colour), white);
 }
 
+/* align profile picture and text */
 #hero div {
 	/* box model */
 	align-items: center;
@@ -126,6 +130,7 @@ header ul a {
 	width: 80%;
 }
 
+/* format profile picture to be a circle */
 #hero img {
 	/* box model */
 	border-radius: 100%;
@@ -150,10 +155,11 @@ main {
 
 	/* visual decorations */
 	background-image: url("../images/main-background.svg");
-	background-size: cover;
 	background-position: right;
+	background-size: cover;
 }
 
+/* align sections vertically for mobile screens */
 main section {
 	/* box model */
 	align-items: center;
@@ -161,6 +167,7 @@ main section {
 	flex-direction: column;
 }
 
+/* style section headers with card style */
 main h3.card {
 	/* box model */
 	border-bottom: solid var(--primary-colour) 5px;
@@ -178,6 +185,7 @@ main h3.card {
 
 /* ----- about me section styles ----- */
 
+/* about be description styles */
 main p.card {
 	/* box model */
 	border-top-left-radius: 0;
@@ -191,6 +199,7 @@ main p.card {
 
 /* ----- work section styles ----- */
 
+/* make sure work div takes up 100% of section width */
 section > div {
 	/* box model */
 	width: 100%;
@@ -201,6 +210,7 @@ section div > .card {
 	padding: 20px 15px;
 }
 
+/* add dividing borders to all projects except the last */
 section div > .card:not(:last-child) {
 	/* box model */
 	border-bottom: solid var(--primary-colour) 5px;
@@ -213,6 +223,7 @@ section div > .card:last-child {
 	border-top-right-radius: 0;
 }
 
+/* align project description at bottom left of image */
 .project {
 	/* box model */
 	border-radius: 10px;
@@ -221,7 +232,7 @@ section div > .card:last-child {
 	height: 150px;
 	justify-content: flex-end;
 	margin: 10px auto;
-	width: calc(100%);
+	width: 100%;
 
 	/* visual decorations */
 	background-size: cover;
@@ -229,6 +240,7 @@ section div > .card:last-child {
 	text-decoration: inherit;
 }
 
+/* add spacing between projects */
 .project:not(:last-child) {
 	/* box model */
 	margin: 0 0 40px 0;
@@ -254,6 +266,7 @@ section div > .card:last-child {
 }
 
 /* add unique background images for each of the projects */
+/* make first image larger than the others */
 #placeholder-portfolio {
 	/* box model */
 	height: 200px;
@@ -307,15 +320,17 @@ section div > .card:last-child {
 
 /* ----- media queries for reponsive design to larger screen sizes ----- */
 
-/* styles for large mobile phones and larger */
+/* --- styles for large mobile phones and larger --- */
 @media screen and (min-width: 575px) {
-	/* header styles */
+	/* - header styles - */
+
+	/* make name header take up less width */
 	header h1.card {
 		/* box model */
 		width: 50%;
 	}
 
-	/* hero section styles */
+	/* - hero section styles - */
 	#hero {
 		/* box model */
 		align-items: flex-end;
@@ -326,7 +341,9 @@ section div > .card:last-child {
 		width: 60%;
 	}
 
-	/* contact me section styles */
+	/* - contact me section styles - */
+
+	/* change list of contact items to row from column */
 	#contact div {
 		/* box model */
 		flex-direction: row;
@@ -335,9 +352,10 @@ section div > .card:last-child {
 	}
 }
 
-/* styles for tablets and larger */
+/* --- styles for tablets and larger---  */
 @media screen and (min-width: 768px) {
-	/* header styles */
+	/* - header styles - */
+	/* make nav links in same row as page title */
 	header {
 		/* box model */
 		flex-direction: row;
@@ -368,7 +386,8 @@ section div > .card:last-child {
 		padding: 0px 20px;
 	}
 
-	/* hero styles */
+	/* - hero styles - */
+	/* change hero content from column, centered to right-side and stacked in a row*/
 	#hero {
 		/* box model */
 		justify-content: flex-end;
@@ -392,12 +411,14 @@ section div > .card:last-child {
 		width: 60%;
 	}
 
-	/* general main content styles */
+	/* - general main content styles - */
+	/* increase the padding on the page edges */
 	main {
 		/* box model */
 		padding: 20px 25px 20px 25px;
 	}
 
+	/* change section titles and content to be in rows from columns */
 	main section {
 		/* box model */
 		flex-direction: row;
@@ -422,13 +443,12 @@ section div > .card:last-child {
 		text-align: right;
 	}
 
-	/* general main section styles */
 	main h3 {
 		/* box model */
 		padding-top: 0px;
 	}
 
-	/* about me section styles  */
+	/* - about me section styles -  */
 	#about {
 		height: 240px;
 	}
@@ -448,11 +468,13 @@ section div > .card:last-child {
 		text-align: left;
 	}
 
-	/* work section styles */
+	/* - work section styles-  */
 	#work {
 		/* box model */
 		margin-top: 25px;
 	}
+
+	/* put all projects in a row with flex-wrap */
 	section > div {
 		/* box model */
 		display: flex;
@@ -461,11 +483,13 @@ section div > .card:last-child {
 		width: 85%;
 	}
 
+	/* make all cards 50% of the div (2 per row) */
 	section div > .card {
 		/* box model */
 		width: 50%;
 	}
 
+	/* make the first project take up 100% of the width */
 	section div > .card:first-child {
 		/* box model */
 		border: none;
@@ -501,7 +525,7 @@ section div > .card:last-child {
 		height: 683px;
 	}
 
-	/* contact me section */
+	/* - contact me section - */
 	#contact {
 		/* box model */
 		align-items: center;
@@ -518,9 +542,9 @@ section div > .card:last-child {
 	}
 }
 
-/* styles for smaller desktop screen and larger */
+/* --- styles for smaller desktop screen and larger --- */
 @media screen and (min-width: 980px) {
-	/* header styles */
+	/* - header styles - */
 	header h1 {
 		/* box model */
 		flex-grow: 1;
@@ -529,38 +553,33 @@ section div > .card:last-child {
 	header nav {
 		/* box model */
 		flex-grow: 5;
-		max-width: 1000px;
 	}
 
-	header ul {
-		/* box model */
-		justify-content: space-around;
-		padding: 0;
-	}
-
-	/* hero section styles */
+	/* - hero section styles - */
+	/* reduce the width of the hero content */
 	#hero div {
 		width: 40%;
 	}
 
-	/* general main section styles */
-	main h3 {
-		/* typography */
-		font-size: 35px;
-	}
-
-	/* hero section styles */
 	h2 {
 		/* box model */
 		width: 60%;
 	}
 
-	/* about me section styles */
+	/* - general main section styles - */
+	/* increase section header font sizes */
+	main h3 {
+		/* typography */
+		font-size: 35px;
+	}
+
+	/* - about me section styles - */
 	#about {
 		height: 200px;
 	}
 
-	/* work section styles */
+	/* - work section styles - */
+	/* increase the height of each project block */
 	.project {
 		/* box model */
 		height: 250px;
