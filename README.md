@@ -14,7 +14,7 @@ The following tools, among others, were used in the design of this application:
 ## Screenshot (Mobile)
 This is a screenshot of the deployed site, as viewed on a mobile device!
 
-<img src="/assets/images/mobile-site-screenshot.png" alt="Screenshot of Deployed Site" width="200"/>
+<img src="/assets/images/mobile-site-screenshot.png" alt="Screenshot of Deployed Site" width="300"/>
 
 
 ## References 
