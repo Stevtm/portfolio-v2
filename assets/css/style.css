@@ -267,10 +267,14 @@ section div > .card:last-child {
 
 /* add unique background images for each of the projects */
 /* make first image larger than the others */
-#placeholder-portfolio {
+#COVacation {
 	/* box model */
 	height: 200px;
 
+	/* visual decorations */
+	background-image: url("../images/covid.jpeg");
+}
+#placeholder-portfolio {
 	/* visual decorations */
 	background-image: url("../images/placeholder-portfolio.jpeg");
 }
