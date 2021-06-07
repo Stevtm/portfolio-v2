@@ -267,6 +267,14 @@ section div > .card:last-child {
 
 /* add unique background images for each of the projects */
 /* make first image larger than the others */
+#TLNT {
+	/* box model */
+	height: 200px;
+
+	/* visual decorations */
+	background-image: url("../images/TLNT.png");
+}
+
 #COVacation {
 	/* box model */
 	height: 200px;
@@ -595,6 +603,11 @@ section div > .card:last-child {
 	}
 
 	#COVacation {
+		/* box model */
+		height: 250px;
+	}
+
+	#TLNT {
 		/* box model */
 		height: 250px;
 	}
